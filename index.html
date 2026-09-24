@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" class="min-h-full">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>mako. — where markets diverge, we allocate.</title>
+  <meta name="description" content="mako. is an allocation engine that monitors markets, calculates edge, sizes positions, and executes across Polymarket and Kalshi." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#1a1a1a',
+            blue: '#0055ff',
+            border: '#e0e0e0',
+            muted: '#474747',
+          },
+          fontFamily: {
+            /* PP Neue Bit is a licensed display font used in the source design.
+               Falls back to a bold sans-serif when it isn't installed/self-hosted. */
+            display: ['"PP Neue Bit"', 'Arial Black', 'Helvetica Neue', 'sans-serif'],
+            sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+</head>
+<body class="min-h-full bg-white text-ink font-sans">
+
+  <!-- Navbar -->
+  <header class="flex items-center justify-between px-[38px] py-7 w-full">
+    <div class="h-[43px] w-[167px] shrink-0">
+      <img src="mako-assets/logo.svg" alt="mako." class="block w-full h-full object-contain" />
+    </div>
+    <nav class="hidden md:flex items-center gap-10 font-display font-bold text-[32px] leading-none text-black">
+      <a href="contact.html" class="hover:text-blue transition-colors">contact</a>
+      <a href="#performance" class="hover:text-blue transition-colors">statistics</a>
+      <a href="#how-it-works" class="hover:text-blue transition-colors">how it works</a>
+    </nav>
+    <a href="contact.html" class="inline-flex items-center gap-4 bg-ink h-[50px] px-4 shrink-0 no-underline">
+      <span class="block w-[14px] h-[14px] bg-white shrink-0"></span>
+      <span class="font-display font-bold text-[32px] leading-none text-white">Apply Now</span>
+    </a>
+  </header>
+
+  <!-- Hero -->
+  <section class="flex flex-col gap-6 pb-6 w-full">
+    <div class="w-full h-[300px] md:h-[597px]">
+      <img src="mako-assets/hero.png" alt="Pixel-art coastal mountain landscape" class="w-full h-full object-cover" />
+    </div>
+    <div class="flex flex-col gap-7 px-6 md:px-[70px] w-full">
+      <div class="flex flex-col font-display font-bold leading-none">
+        <p class="text-blue text-[56px] md:text-[96px]">mako.</p>
+        <p class="text-ink text-[36px] md:text-[64px]">where markets diverge, we allocate.</p>
+      </div>
+      <a href="contact.html" class="inline-flex items-center gap-4 bg-ink h-[50px] px-4 w-fit no-underline">
+        <span class="block w-[14px] h-[14px] bg-white shrink-0"></span>
+        <span class="font-display font-bold text-[32px] leading-none text-white">Apply Now</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Performance -->
+  <section id="performance" class="flex flex-col items-center justify-center pt-36 pb-[72px] px-6 md:px-[70px] w-full">
+    <div class="flex flex-col gap-2 pb-6 w-full">
+      <div class="inline-flex items-center gap-2 w-fit pr-2 py-2">
+        <span class="block w-3 h-3 bg-blue shrink-0"></span>
+        <span class="font-display font-bold text-2xl text-black opacity-80">Performance</span>
+      </div>
+      <div class="flex flex-col lg:flex-row gap-8 lg:gap-[75px] items-start lg:items-center w-full">
+        <div class="font-display font-bold leading-none text-ink text-[36px] md:text-[64px] shrink-0">
+          <p>Data.</p>
+          <p>Divergence.</p>
+          <p>Edge.</p>
+        </div>
+        <div class="grid grid-cols-2 xl:grid-cols-4 gap-6 flex-1 w-full">
+          <div class="flex flex-col gap-1 py-6 min-w-0">
+            <img src="mako-assets/icon-chart-line.svg" alt="" class="w-6 h-6" />
+            <p class="font-display font-bold text-blue text-[64px] leading-none">~2%</p>
+            <p class="font-display font-bold text-blue text-[40px] leading-none">daily return</p>
+            <p class="font-display font-bold text-blue text-2xl leading-none opacity-70">(avg)</p>
+          </div>
+          <div class="flex flex-col gap-1 py-6 min-w-0">
+            <img src="mako-assets/icon-ev.svg" alt="" class="w-6 h-6" />
+            <p class="font-display font-bold text-blue text-[64px] leading-none">+EV</p>
+            <p class="font-display font-bold text-blue text-[40px] leading-none">positive edge</p>
+            <p class="font-display font-bold text-blue text-2xl leading-none opacity-70">(historical)</p>
+          </div>
+          <div class="flex flex-col gap-1 py-6 min-w-0">
+            <img src="mako-assets/icon-latency.svg" alt="" class="w-6 h-6" />
+            <p class="font-display font-bold text-blue text-[64px] leading-none">&lt;1s</p>
+            <p class="font-display font-bold text-blue text-[40px] leading-none">trade latency</p>
+            <p class="font-display font-bold text-blue text-2xl leading-none opacity-70">(target)</p>
+          </div>
+          <div class="flex flex-col gap-1 py-6 min-w-0">
+            <img src="mako-assets/icon-coverage.svg" alt="" class="w-6 h-6" />
+            <p class="font-display font-bold text-blue text-[64px] leading-none">24/7</p>
+            <p class="font-display font-bold text-blue text-[40px] leading-none">market coverage</p>
+            <p class="font-display font-bold text-blue text-2xl leading-none opacity-70">(poly + kalshi)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Divider -->
+  <div class="flex items-center px-6 md:px-[70px] w-full">
+    <div class="w-full h-6 bg-[radial-gradient(circle,_#d9d9d9_1.5px,_transparent_1.5px)] bg-[length:12px_12px]"></div>
+  </div>
+
+  <!-- How It Works -->
+  <section id="how-it-works" class="flex flex-col items-center justify-center pt-36 pb-[72px] px-6 md:px-[70px] w-full">
+    <div class="flex flex-col gap-9 pb-6 w-full">
+      <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 w-full">
+        <div class="flex flex-col gap-2">
+          <div class="inline-flex items-center gap-2 w-fit pr-2 py-2">
+            <span class="block w-3 h-3 bg-blue shrink-0"></span>
+            <span class="font-display font-bold text-2xl text-black opacity-80">How It Works</span>
+          </div>
+          <p class="font-display font-bold text-ink text-[36px] md:text-[64px] leading-none">Allocation Engine</p>
+        </div>
+        <div class="flex-1 max-w-[500px] w-full h-[72px] overflow-hidden">
+          <img src="mako-assets/hero.png" alt="" class="w-full h-full object-cover object-[50%_15%]" />
+        </div>
+      </div>
+
+      <div class="flex overflow-x-auto border-t border-b border-border w-full">
+        <div class="flex flex-col p-4 w-[314px] shrink-0 border-l border-r border-border">
+          <div class="flex flex-col gap-6 w-full">
+            <p class="font-display font-bold text-blue text-[34px] tracking-[-1.2px] leading-tight">Monitor Markets</p>
+            <div class="flex items-center justify-end px-6 py-3 w-full">
+              <img src="mako-assets/icon-monitor.svg" alt="" class="w-[60px] h-[40px]" />
+            </div>
+          </div>
+          <div class="flex items-center py-6 w-full">
+            <div class="flex-1 h-2 bg-blue"></div>
+          </div>
+          <div class="flex flex-col gap-5 w-full">
+            <p class="font-medium text-[16px] tracking-[-0.8px] text-muted">// 001</p>
+            <p class="font-medium text-[16px] tracking-[-0.8px] text-muted leading-snug">Spot mispricing across Polymarket and Kalshi in real time</p>
+          </div>
+        </div>
+        <div class="flex flex-col p-4 w-[314px] shrink-0 border-r border-border">
+          <div class="flex flex-col gap-6 w-full">
+            <p class="font-display font-bold text-blue text-[34px] tracking-[-1.2px] leading-tight">Calculate Edge</p>
+            <div class="flex items-center justify-end px-6 py-3 w-full">
+              <img src="mako-assets/icon-calculate.svg" alt="" class="w-[40px] h-[45px]" />
+            </div>
+          </div>
+          <div class="flex items-center py-6 w-full">
+            <div class="flex-1 h-2 bg-blue"></div>
+          </div>
+          <div class="flex flex-col gap-5 w-full">
+            <p class="font-medium text-[16px] tracking-[-0.8px] text-muted">// 002</p>
+            <p class="font-medium text-[16px] tracking-[-0.8px] text-muted leading-snug">Measure expected return, slippage, and probability of execution</p>
+          </div>
+        </div>
+        <div class="flex flex-col p-4 w-[314px] shrink-0 border-r border-border">
+          <div class="flex flex-col gap-6 w-full">
+            <p class="font-display font-bold text-blue text-[34px] tracking-[-1.2px] leading-tight">Size Position</p>
+            <div class="flex items-center justify-end px-6 py-3 w-full">
+              <img src="mako-assets/icon-size.svg" alt="" class="w-[40px] h-[40px]" />
+            </div>
+          </div>
+          <div class="flex items-center py-6 w-full">
+            <div class="flex-1 h-2 bg-blue"></div>
+          </div>
+          <div class="flex flex-col gap-5 w-full">
+            <p class="font-medium text-[16px] tracking-[-0.8px] text-muted">// 003</p>
+            <p class="font-medium text-[16px] tracking-[-0.8px] text-muted leading-snug">Apply Kelly criterion with capital limits and portfolio constraints</p>
+          </div>
+        </div>
+        <div class="flex flex-col p-4 w-[314px] shrink-0 border-r border-border">
+          <div class="flex flex-col gap-6 w-full">
+            <p class="font-display font-bold text-blue text-[34px] tracking-[-1.2px] leading-tight">Execute</p>
+            <div class="flex items-center justify-end px-6 py-3 w-full">
+              <img src="mako-assets/icon-execute.svg" alt="" class="w-[38px] h-[44px]" />
+            </div>
+          </div>
+          <div class="flex items-center py-6 w-full">
+            <div class="flex-1 h-2 bg-blue"></div>
+          </div>
+          <div class="flex flex-col gap-5 w-full">
+            <p class="font-medium text-[16px] tracking-[-0.8px] text-muted">// 004</p>
+            <p class="font-medium text-[16px] tracking-[-0.8px] text-muted leading-snug">Place orders on both legs at optimal timing</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
