@@ -2,8 +2,10 @@
   "name": "mako-landing",
   "private": true,
   "scripts": {
-    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify && rm -rf public && mkdir public && cp -r index.html dist img public/",
     "dev": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
   },
-  "devDependencies": { "tailwindcss": "^3.4.17" }
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
 }
