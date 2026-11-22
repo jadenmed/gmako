@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>mako | Where markets diverge, we allocate</title>
+  <meta name="description" content="Access data-driven arbitrage opportunities across Polymarket and Kalshi. Application only." />
+  <link rel="stylesheet" href="./dist/output.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header id="nav" class="sticky top-0 z-50 border-b border-mako-rule bg-white/95 backdrop-blur">
+    <div class="wrap flex h-[67px] items-center justify-between">
+      <a href="#top" aria-label="mako home"><img src="./img/logo.svg" alt="mako." class="h-[34px] w-auto" /></a>
+      <nav class="hidden items-center gap-12 font-pixel text-[24px] font-bold md:flex">
+        <a href="#performance" class="nav-link hover:text-mako-blue">performance</a>
+        <a href="#how-it-works" class="nav-link hover:text-mako-blue">how it works</a>
+        <a href="#contact" class="nav-link hover:text-mako-blue">contact</a>
+      </nav>
+      <a href="#apply" class="btn !h-[44px] !text-[22px]">Apply Now</a>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="grid min-h-[640px] lg:grid-cols-[640px_minmax(0,1fr)]">
+      <div class="flex flex-col justify-center gap-6 px-6 py-16 md:pl-[70px] lg:pr-10">
+        <p class="caret reveal font-pixel text-[22px] font-bold text-mako-blue" data-hero>Prediction market arbitrage</p>
+        <h1 data-hero style="--d:120ms" class="reveal max-w-[570px] font-pixel text-6xl font-bold leading-[0.95] sm:text-7xl md:text-[88px]">where markets diverge, we allocate.</h1>
+        <p data-hero style="--d:240ms" class="reveal max-w-[520px] font-pixel text-[26px] font-bold leading-8 text-mako-body">Access data-driven arbitrage opportunities across Polymarket and Kalshi.</p>
+        <div data-hero style="--d:360ms" class="reveal"><a href="#apply" class="btn">Apply Now</a></div>
+      </div>
+      <div class="relative min-h-[320px] overflow-hidden">
+        <div class="wipe absolute inset-0 overflow-hidden" data-hero><img src="./img/hero.jpg" alt="Pixel-art ocean and coastline" class="kenburns absolute inset-0 h-full w-full object-cover" /></div>
+      </div>
+    </section>
+
+    <!-- PERFORMANCE -->
+    <section id="performance" class="py-[72px]">
+      <div class="relative h-auto overflow-hidden bg-white lg:h-[329px]">
+        <img src="./img/circuit.png" alt="" aria-hidden="true" class="drift absolute left-0 top-0 object-cover" />
+        <div class="wrap relative grid gap-10 py-12 lg:grid-cols-[332px_1fr] lg:py-[28px]">
+          <div>
+            <p class="badge">Performance</p>
+            <h2 class="mt-4 max-w-[200px] font-pixel text-5xl font-bold leading-[0.95] md:text-[64px]">Data Divergence Edge</h2>
+          </div>
+          <dl class="grid grid-cols-2 gap-x-8 gap-y-10 pt-4 lg:grid-cols-4 lg:pt-14">
+            <div>
+              <svg class="mb-3 h-6 w-6 text-mako-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 18l7-7 4 4 9-9M16 6h6v6" /></svg>
+              <dt data-scramble class="font-pixel text-[44px] font-bold leading-none text-mako-blue">~1.5%</dt>
+              <dd class="mt-2 font-pixel text-[22px] font-bold leading-6 text-mako-blue">daily return<br />(avg)</dd>
+            </div>
+            <div>
+              <svg class="mb-3 h-6 w-6 text-mako-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9" /><circle cx="12" cy="12" r="4" /></svg>
+              <dt data-scramble class="font-pixel text-[44px] font-bold leading-none text-mako-blue">+EV</dt>
+              <dd class="mt-2 font-pixel text-[22px] font-bold leading-6 text-mako-blue">positive edge<br />(historical)</dd>
+            </div>
+            <div>
+              <svg class="mb-3 h-6 w-6 text-mako-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L4 14h7l-1 8 9-12h-7z" /></svg>
+              <dt data-scramble class="font-pixel text-[44px] font-bold leading-none text-mako-blue">&lt;1s</dt>
+              <dd class="mt-2 font-pixel text-[22px] font-bold leading-6 text-mako-blue">trade latency<br />(target)</dd>
+            </div>
+            <div>
+              <svg class="mb-3 h-6 w-6 text-mako-blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 12c0-3 2-5 4-5s3 2 4 5 2 5 4 5 4-2 4-5-2-5-4-5-3 2-4 5-2 5-4 5-4-2-4-5z" /></svg>
+              <dt data-scramble class="font-pixel text-[44px] font-bold leading-none text-mako-blue">24/7</dt>
+              <dd class="mt-2 font-pixel text-[22px] font-bold leading-6 text-mako-blue">market coverage<br />(poly + kalshi)</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how-it-works" class="wrap py-[72px]">
+      <div class="flex flex-col justify-between gap-8 md:flex-row md:items-start">
+        <div>
+          <p class="badge">How It Works</p>
+          <h2 class="h2 mt-4">Allocation Engine</h2>
+        </div>
+        <img src="./img/banner.jpg" alt="" class="h-[72px] w-full max-w-[500px] object-cover" />
+      </div>
+
+      <ol class="mt-12 grid border border-mako-line md:grid-cols-2 lg:grid-cols-4">
+        <li class="step-card reveal flex flex-col border-b border-mako-line p-4 lg:border-b-0 lg:border-r">
+          <h3 class="font-pixel text-[36px] font-bold leading-none text-mako-blue">Monitor Markets</h3>
+          <img src="./img/icon-eye.svg" alt="" class="bob mt-6 w-full" />
+          <div class="step-line grow-x h-2 bg-mako-blue"></div>
+          <p class="mt-6 font-pixel text-[24px] font-bold text-mako-body">// 001</p>
+          <p class="mt-16 font-pixel text-[24px] font-bold leading-7 text-mako-body">Spot mispricing across Polymarket and Kalshi in real time</p>
+        </li>
+        <li class="step-card reveal flex flex-col border-b border-mako-line p-4 lg:border-b-0 lg:border-r">
+          <h3 class="font-pixel text-[36px] font-bold leading-none text-mako-blue">Calculate Edge</h3>
+          <img src="./img/icon-calc.svg" alt="" class="bob mt-6 w-full" />
+          <div class="step-line grow-x h-2 bg-mako-blue"></div>
+          <p class="mt-6 font-pixel text-[24px] font-bold text-mako-body">// 002</p>
+          <p class="mt-16 font-pixel text-[24px] font-bold leading-7 text-mako-body">Measure expected return, slippage, and probability of execution</p>
+        </li>
+        <li class="step-card reveal flex flex-col border-b border-mako-line p-4 lg:border-b-0 lg:border-r">
+          <h3 class="font-pixel text-[36px] font-bold leading-none text-mako-blue">Size Position</h3>
+          <img src="./img/icon-percent.svg" alt="" class="bob mt-6 w-full" />
+          <div class="step-line grow-x h-2 bg-mako-blue"></div>
+          <p class="mt-6 font-pixel text-[24px] font-bold text-mako-body">// 003</p>
+          <p class="mt-16 font-pixel text-[24px] font-bold leading-7 text-mako-body">Apply Kelly criterion with capital limits and portfolio constraints</p>
+        </li>
+        <li class="step-card reveal flex flex-col p-4">
+          <h3 class="font-pixel text-[36px] font-bold leading-none text-mako-blue">Execute</h3>
+          <img src="./img/icon-dollar.svg" alt="" class="bob mt-6 w-full" />
+          <div class="step-line grow-x h-2 bg-mako-blue"></div>
+          <p class="mt-6 font-pixel text-[24px] font-bold text-mako-body">// 004</p>
+          <p class="mt-16 font-pixel text-[24px] font-bold leading-7 text-mako-body">Place orders on both legs at optimal timing</p>
+        </li>
+      </ol>
+
+      <figure class="reveal mt-12 overflow-hidden border border-mako-line">
+        <img src="./img/dashboard.jpg" alt="mako dashboard preview: wallet balance, portfolio allocation and live arbitrage opportunities" class="block w-full" />
+      </figure>
+    </section>
+
+    <!-- ALLOCATION -->
+    <section id="allocation" class="wrap py-[72px]">
+      <div class="flex items-start justify-between gap-6">
+        <div>
+          <p class="badge">Allocation</p>
+          <h2 class="h2 mt-4">Set your allocation</h2>
+        </div>
+        <span class="mt-6 hidden bg-mako-ink px-5 py-1 font-pixel text-[22px] font-bold text-white sm:block">Application only</span>
+      </div>
+
+      <div class="mt-12 grid gap-12 lg:grid-cols-[minmax(0,1fr)_750px]">
+        <div>
+          <p class="font-pixel text-[22px] font-bold text-mako-body">Your allocation</p>
+          <p id="amount" class="mt-3 font-pixel text-6xl font-bold leading-[0.9] text-mako-blue sm:text-8xl md:text-[128px]">$10,000</p>
+          <p class="mt-6 max-w-[500px] font-pixel text-[22px] font-bold text-mako-body">From $1,000 to $50,000, in $1,000 steps.</p>
+        </div>
+
+        <div class="border border-mako-ink/20 bg-white p-6">
+          <p class="font-pixel text-[26px] font-bold">Projected growth</p>
+          <svg id="chart" data-chart viewBox="0 0 700 170" class="mt-3 h-[170px] w-full" role="img" aria-label="Projected growth over 12 months"></svg>
+          <div class="mt-4 grid grid-cols-3 gap-4">
+            <div><p class="font-pixel text-[20px] font-bold text-mako-body">3 months</p><p id="p3" class="font-pixel text-[44px] font-bold leading-none text-mako-blue"></p></div>
+            <div><p class="font-pixel text-[20px] font-bold text-mako-body">6 months</p><p id="p6" class="font-pixel text-[44px] font-bold leading-none text-mako-blue"></p></div>
+            <div><p class="font-pixel text-[20px] font-bold text-mako-body">12 months</p><p id="p12" class="font-pixel text-[44px] font-bold leading-none text-mako-blue"></p></div>
+          </div>
+          <p id="disclaimer" class="mt-4 font-pixel text-[20px] font-bold text-mako-muted"></p>
+        </div>
+      </div>
+
+      <!-- Slider -->
+      <div class="mt-14">
+        <div class="relative">
+          <output id="tooltip" class="pointer-events-none absolute -top-12 -translate-x-1/2 bg-mako-ink px-3 py-1 font-pixel text-[22px] font-bold text-white" style="left:19.6%">$10,000</output>
+          <input id="slider" type="range" min="1000" max="50000" step="1000" value="10000" class="mako-range pulse" aria-label="Investment amount" />
+          <div class="mt-3 flex justify-between font-pixel text-[20px] font-bold text-mako-muted">
+            <span>$1k</span><span>$10k</span><span>$20k</span><span>$30k</span><span>$40k</span><span>$50k</span>
+          </div>
+        </div>
+        <p class="mt-3 font-pixel text-[20px] font-bold text-mako-muted">Drag to see how your allocation could grow.</p>
+      </div>
+    </section>
+
+    <!-- APPLICATION FORM -->
+    <section id="apply" class="wrap py-[72px]">
+      <div class="grid gap-12 lg:grid-cols-[minmax(0,1fr)_750px]">
+        <div>
+          <p class="badge">Application</p>
+          <h2 class="h2 mt-4">Apply for access</h2>
+          <p class="mt-10 max-w-[480px] font-pixel text-[24px] font-bold leading-8 text-mako-body">Tell us a bit about yourself. Every investment is reviewed individually and accepted by application only.</p>
+          <p class="mt-20 font-pixel text-[20px] font-bold uppercase text-mako-muted">What happens next</p>
+          <ol class="mt-5 space-y-5 font-pixel text-[24px] font-bold">
+            <li class="flex gap-6"><span class="text-mako-blue">01</span>Submit your application</li>
+            <li class="flex gap-6"><span class="text-mako-blue">02</span>We review your details and allocation</li>
+            <li class="flex gap-6"><span class="text-mako-blue">03</span>Approved investors get dashboard access</li>
+          </ol>
+        </div>
+
+        <form id="apply-form" class="border border-mako-ink/20 bg-white p-[30px]" novalidate>
+          <div class="grid gap-x-6 gap-y-5 sm:grid-cols-2">
+            <div><label class="label" for="name">Full name</label><input class="field" id="name" name="name" type="text" placeholder="Jane Smith" autocomplete="name" required /></div>
+            <div><label class="label" for="email">Email</label><input class="field" id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required /></div>
+            <div><label class="label" for="phone">Phone</label><input class="field" id="phone" name="phone" type="tel" placeholder="+1 000 000 0000" autocomplete="tel" /></div>
+            <div>
+              <label class="label" for="country">Country of residence</label>
+              <div class="relative">
+                <select class="field appearance-none pr-10" id="country" name="country" required>
+                  <option value="" disabled selected>Select country</option>
+                  <option>United States</option><option>Canada</option><option>United Kingdom</option><option>Other</option>
+                </select>
+                <span class="pointer-events-none absolute right-[18px] top-1/2 h-[10px] w-[10px] -translate-y-1/2 bg-mako-ink"></span>
+              </div>
+            </div>
+            <div class="sm:col-span-2">
+              <label class="label" for="experience">Investing experience</label>
+              <div class="relative">
+                <select class="field appearance-none pr-10" id="experience" name="experience" required>
+                  <option value="" disabled selected>Select one</option>
+                  <option>New to investing</option><option>1 to 3 years</option><option>3 to 10 years</option><option>10+ years</option>
+                </select>
+                <span class="pointer-events-none absolute right-[18px] top-1/2 h-[10px] w-[10px] -translate-y-1/2 bg-mako-ink"></span>
+              </div>
+            </div>
+            <div class="sm:col-span-2">
+              <label class="label" for="allocation-field">Requested allocation</label>
+              <div class="flex h-[52px] items-center justify-between border border-mako-blue/50 bg-mako-tint px-4">
+                <output id="allocation-field" class="font-pixel text-[28px] font-bold text-mako-blue">$10,000</output>
+                <span class="font-pixel text-[20px] font-bold text-mako-muted">Set with the slider above</span>
+              </div>
+              <input type="hidden" name="allocation" id="allocation-value" value="10000" />
+            </div>
+          </div>
+
+          <label class="mt-7 flex cursor-pointer items-center gap-3 font-pixel text-[22px] font-bold text-mako-body">
+            <input type="checkbox" id="consent" name="consent" required class="h-[22px] w-[22px] shrink-0 appearance-none rounded-none border border-mako-ink/60 bg-white checked:border-mako-blue checked:bg-mako-blue" />
+            I understand mako is application only and that returns are not guaranteed.
+          </label>
+
+          <button type="submit" class="btn mt-7 !gap-16 !pr-[22px]">Submit application</button>
+          <p id="form-status" class="mt-4 hidden font-pixel text-[22px] font-bold" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+    <div class="h-6 border-y border-mako-rule bg-mako-tint/40" aria-hidden="true"></div>
+
+    <!-- FAQ -->
+    <section id="faq" class="wrap py-[72px]">
+      <div class="grid gap-12 lg:grid-cols-[420px_minmax(0,1fr)]">
+        <div>
+          <p class="badge">FAQ</p>
+          <h2 class="h2 mt-4">Frequently Asked Questions</h2>
+          <p class="mt-4 font-pixel text-[22px] font-bold text-mako-body">Everything you need to know about Mako</p>
+          <a href="#contact" class="btn btn-light mt-8">Talk To A Human</a>
+        </div>
+
+        <div class="max-w-[613px] divide-y divide-mako-ink">
+          <details class="group py-6" open>
+            <summary class="flex cursor-pointer list-none items-center justify-between font-pixel text-[32px] font-bold text-mako-body group-open:text-mako-ink">What is an arbitrage?<span class="font-pixel text-mako-blue group-open:rotate-45">+</span></summary>
+            <p class="mt-4 font-pixel text-[22px] font-bold leading-7 text-mako-body">Arbitrage means capturing a price gap for the same outcome on two venues. When Polymarket and Kalshi price the same event differently, mako takes both sides so the spread is locked in regardless of how the event resolves.</p>
+          </details>
+          <details class="group py-6">
+            <summary class="flex cursor-pointer list-none items-center justify-between font-pixel text-[32px] font-bold text-mako-body group-open:text-mako-ink">Can I lose any capital?<span class="font-pixel text-mako-blue group-open:rotate-45">+</span></summary>
+            <p class="mt-4 font-pixel text-[22px] font-bold leading-7 text-mako-body">Yes. Arbitrage reduces market risk but does not remove it. Execution risk, slippage, venue or platform risk, and resolution differences can all cause losses. Returns are never guaranteed.</p>
+          </details>
+          <details class="group py-6">
+            <summary class="flex cursor-pointer list-none items-center justify-between font-pixel text-[32px] font-bold text-mako-body group-open:text-mako-ink">How do fees and slippage affect returns?<span class="font-pixel text-mako-blue group-open:rotate-45">+</span></summary>
+            <p class="mt-4 font-pixel text-[22px] font-bold leading-7 text-mako-body">Venue fees and slippage come out of the spread. mako only places a trade when the expected edge remains positive after both are accounted for.</p>
+          </details>
+          <details class="group py-6">
+            <summary class="flex cursor-pointer list-none items-center justify-between font-pixel text-[32px] font-bold text-mako-body group-open:text-mako-ink">What is the average yield per trade?<span class="font-pixel text-mako-blue group-open:rotate-45">+</span></summary>
+            <p class="mt-4 font-pixel text-[22px] font-bold leading-7 text-mako-body">It varies with market conditions and liquidity. Approved investors can see historical performance in the dashboard. Past results do not predict future returns.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="relative isolate overflow-hidden">
+      <img data-parallax src="./img/cta.jpg" alt="" aria-hidden="true" class="absolute inset-x-0 -top-10 -z-10 h-[calc(100%+80px)] w-full object-cover will-change-transform" />
+      <div class="absolute inset-0 -z-10 bg-mako-blue/20"></div>
+      <div class="wrap flex min-h-[403px] flex-col justify-center gap-8 py-16 md:flex-row md:items-center md:justify-between">
+        <div>
+          <p class="flex items-center gap-3 font-pixel text-[22px] font-bold text-white before:block before:h-[14px] before:w-[14px] before:bg-white">Get Started</p>
+          <h2 class="mt-4 font-pixel text-5xl font-bold leading-none text-white md:text-[64px]">Join mako today.</h2>
+          <p class="mt-4 max-w-[560px] font-pixel text-[24px] font-bold leading-8 text-white">Access data-driven arbitrage opportunities across Polymarket and Kalshi.</p>
+        </div>
+        <div><a href="#apply" class="btn">Apply Now</a></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="contact" class="relative overflow-hidden bg-white">
+    <div class="wrap pt-[120px]">
+      <div class="grid gap-16 lg:grid-cols-[minmax(0,1fr)_620px]">
+        <div>
+          <h2 class="max-w-[600px] font-pixel text-5xl font-bold leading-[0.95] md:text-[64px]">Allocate where markets diverge.</h2>
+          <p class="mt-8 max-w-[540px] font-pixel text-[24px] font-bold leading-8 text-mako-body">Access data-driven arbitrage opportunities across Polymarket and Kalshi.</p>
+          <a href="#apply" class="btn mt-10">Apply for access</a>
+        </div>
+        <div class="grid gap-8 font-pixel font-bold sm:grid-cols-3">
+          <div>
+            <p class="flex items-center gap-3 text-[20px]"><span class="block h-[9px] w-[9px] rotate-45 bg-mako-blue"></span>Product</p>
+            <ul class="mt-6 space-y-2 text-[24px] leading-[44px] text-mako-body">
+              <li><a class="hover:text-mako-blue" href="#performance">Performance</a></li>
+              <li><a class="hover:text-mako-blue" href="#how-it-works">How it works</a></li>
+              <li><a class="hover:text-mako-blue" href="#allocation">Allocation</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="flex items-center gap-3 text-[20px]"><span class="block h-[9px] w-[9px] rotate-45 bg-mako-blue"></span>Company</p>
+            <ul class="mt-6 space-y-2 text-[24px] leading-[44px] text-mako-body">
+              <li><a class="hover:text-mako-blue" href="#faq">FAQ</a></li>
+              <li><a class="hover:text-mako-blue" href="#apply">Apply</a></li>
+              <li><a class="hover:text-mako-blue" href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="flex items-center gap-3 text-[20px]"><span class="block h-[9px] w-[9px] rotate-45 bg-mako-blue"></span>Legal</p>
+            <ul class="mt-6 space-y-2 text-[24px] leading-[44px] text-mako-body">
+              <li><a class="hover:text-mako-blue" href="#">Terms</a></li>
+              <li><a class="hover:text-mako-blue" href="#">Privacy</a></li>
+              <li><a class="hover:text-mako-blue" href="#">Risk disclosure</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-16 grid gap-8 lg:grid-cols-[560px_minmax(0,1fr)]">
+        <div class="border border-mako-line p-6">
+          <p class="font-pixel text-[28px] font-bold">Prediction market arbitrage</p>
+          <p class="mt-3 font-pixel text-[22px] font-bold leading-7 text-mako-body">mako is an Ocean Development product building data-driven arbitrage across Polymarket and Kalshi.</p>
+        </div>
+        <div class="grid gap-6 font-pixel font-bold sm:grid-cols-2">
+          <div><p class="text-[20px] text-mako-muted">Support</p><a href="mailto:support@usemako.com" class="text-[24px] hover:text-mako-blue">support@usemako.com</a></div>
+          <div><p class="text-[20px] text-mako-muted">Location</p><p class="text-[24px]">Miami, Florida</p></div>
+        </div>
+      </div>
+
+      <div class="mt-12 flex flex-col justify-between gap-3 border-t border-mako-rule pt-6 font-pixel text-[20px] font-bold sm:flex-row">
+        <p class="text-mako-muted">&copy; 2026 mako. An Ocean Development product. All rights reserved.</p>
+        <a href="#top" class="uppercase hover:text-mako-blue">Back to top</a>
+      </div>
+    </div>
+
+    <div class="mx-auto mt-12 h-[160px] max-w-page overflow-hidden px-6 md:h-[260px] md:px-[70px]" aria-hidden="true">
+      <img src="./img/footer-logo.svg" alt="" class="reveal block w-full" style="--d:100ms" />
+    </div>
+  </footer>
+
+  <script>
+    // Illustrative monthly rate. Pending the final decision (3%, 5.8% compounded, or trailing performance)
+    // and a compliance review of any return figures shown publicly.
+    const MONTHLY_RATE = 0.03;
+
+    const slider = document.getElementById("slider");
+    const fmt = (n) => "$" + Math.round(n).toLocaleString("en-US");
+    const proj = (amt, m) => amt * Math.pow(1 + MONTHLY_RATE, m);
+
+    function drawChart(amt) {
+      const W = 700, H = 170, pad = 8;
+      const c = document.getElementById("chart"), a = c.dataset.anim === "1"; c.dataset.anim = "0";
+      const pts = Array.from({ length: 13 }, (_, m) => proj(amt, m));
+      const min = pts[0], max = pts[12];
+      const x = (i) => pad + (i / 12) * (W - pad * 2);
+      const y = (v) => H - pad - ((v - min) / (max - min || 1)) * (H - pad * 2);
+      const line = pts.map((v, i) => `${i ? "L" : "M"}${x(i).toFixed(1)} ${y(v).toFixed(1)}`).join(" ");
+      document.getElementById("chart").innerHTML =
+        `<path class="${a ? "draw-fill" : ""}" d="${line} L${x(12)} ${H} L${x(0)} ${H} Z" fill="#0055ff" fill-opacity="0.08"/>` +
+        `<path class="${a ? "draw-line" : ""}" pathLength="1" d="${line}" fill="none" stroke="#0055ff" stroke-width="3" stroke-linejoin="round"/>` +
+        `<rect x="${x(12) - 5}" y="${y(max) - 5}" width="10" height="10" fill="#0055ff"/>`;
+    }
+
+    function update() {
+      const amt = Number(slider.value);
+      const pct = ((amt - slider.min) / (slider.max - slider.min)) * 100;
+      slider.style.background = `linear-gradient(to right, #0055ff ${pct}%, #d9d9d9 ${pct}%)`;
+      const tip = document.getElementById("tooltip");
+      tip.textContent = fmt(amt);
+      // keep the tooltip centred over the 24px thumb
+      tip.style.left = `calc(${pct}% + ${12 - pct * 0.24}px)`;
+      document.getElementById("amount").textContent = fmt(amt);
+      document.getElementById("allocation-field").textContent = fmt(amt);
+      document.getElementById("allocation-value").value = amt;
+      document.getElementById("p3").textContent = fmt(proj(amt, 3));
+      document.getElementById("p6").textContent = fmt(proj(amt, 6));
+      document.getElementById("p12").textContent = fmt(proj(amt, 12));
+      document.getElementById("disclaimer").textContent =
+        `Illustrative projection at an assumed ${(MONTHLY_RATE * 100).toFixed(0)}% monthly return. Not a guarantee of results.`;
+      drawChart(amt);
+    }
+    slider.addEventListener("input", update);
+    update();
+
+
+    /* ---------- Motion ---------- */
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const nav = document.getElementById("nav");
+    const onScroll = () => {
+      nav.classList.toggle("nav-scrolled", scrollY > 8);
+      document.querySelectorAll("[data-parallax]").forEach((el) => {
+        const r = el.parentElement.getBoundingClientRect();
+        el.style.transform = `translateY(${(r.top * -0.08).toFixed(1)}px)`;
+      });
+    };
+    addEventListener("scroll", onScroll, { passive: true }); onScroll();
+
+    // tag elements for scroll reveal with a stagger
+    const tag = (sel, cls = "reveal", step = 90) =>
+      document.querySelectorAll(sel).forEach((el, i) => { el.classList.add(cls); el.style.setProperty("--d", i * step + "ms"); });
+    tag("#performance .badge, #performance h2, #performance dl > div");
+    tag("#how-it-works .badge, #how-it-works h2");
+    tag("#how-it-works img[src$='banner.jpg']", "reveal", 200);
+    tag("#how-it-works ol > li", "reveal", 120);
+    tag("#allocation .badge, #allocation h2, #allocation .grid > div, #allocation .mt-14");
+    tag("#apply .badge, #apply h2, #apply .grid > div:first-child p, #apply ol li, #apply form");
+    tag("#faq .badge, #faq h2, #faq .btn, #faq details", "reveal", 80);
+    tag("section.relative.isolate .wrap > div", "reveal", 140);
+    tag("footer .wrap > div", "reveal", 100);
+
+    const scramble = (el) => {
+      const final = el.textContent, chars = "01+-/<>_#%";
+      if (reduce) return;
+      let f = 0; const total = 18;
+      const t = setInterval(() => {
+        el.textContent = [...final].map((c, i) => (i < (f / total) * final.length ? c : chars[Math.floor(Math.random() * chars.length)])).join("");
+        if (++f > total) { clearInterval(t); el.textContent = final; }
+      }, 40);
+    };
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (!e.isIntersecting) return;
+        const el = e.target; el.classList.add("in"); io.unobserve(el);
+        if (el.matches("#performance dl > div")) scramble(el.querySelector("dt"));
+        if (el.contains(document.getElementById("chart"))) { document.getElementById("chart").dataset.anim = "1"; drawChart(Number(slider.value)); }
+      });
+    }, { threshold: 0.15, rootMargin: "0px 0px -6% 0px" });
+    document.querySelectorAll(".reveal, .wipe, .grow-x").forEach((el) => {
+      if (el.hasAttribute("data-hero")) requestAnimationFrame(() => setTimeout(() => el.classList.add("in"), 80));
+      else io.observe(el);
+    });
+    // grow-x lives inside revealed cards: trigger with the card
+    document.querySelectorAll(".step-card").forEach((card) => {
+      new IntersectionObserver((en, ob) => { if (en[0].isIntersecting) { card.querySelector(".grow-x").classList.add("in"); ob.disconnect(); } }, { threshold: 0.3 }).observe(card);
+    });
+
+    // eased count for the big amount as the slider moves
+    let shown = Number(slider.value), raf;
+    slider.addEventListener("input", () => {
+      cancelAnimationFrame(raf);
+      const from = shown, to = Number(slider.value), t0 = performance.now();
+      const step = (t) => {
+        const k = Math.min(1, (t - t0) / 260), e = 1 - Math.pow(1 - k, 3);
+        shown = from + (to - from) * e;
+        document.getElementById("amount").textContent = fmt(shown);
+        if (k < 1) raf = requestAnimationFrame(step);
+      };
+      raf = requestAnimationFrame(step);
+    });
+    // stop the thumb pulse once the visitor has used the slider
+    slider.addEventListener("pointerdown", () => slider.classList.remove("pulse"), { once: true });
+
+    document.getElementById("apply-form").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const form = e.target;
+      const status = document.getElementById("form-status");
+      status.classList.remove("hidden", "text-red-600", "text-mako-blue");
+      if (!form.checkValidity()) {
+        status.classList.add("text-red-600");
+        status.textContent = "Please complete the required fields.";
+        form.reportValidity();
+        return;
+      }
+      status.classList.add("text-mako-blue");
+      status.textContent = "Application received. We will be in touch.";
+      // TODO: POST Object.fromEntries(new FormData(form)) to your endpoint.
+    });
+  </script>
+</body>
+</html>
